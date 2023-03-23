@@ -1,3 +1,6 @@
+// import alias "@/" (that was defined at the time of porject creation) used to import Header. Absolute path is not needed while using import alias. It's cnfoguration is written in tsconfig.json file/paths.
+
+import Header from '@/components/layout/Header'
 import './globals.css'
 
 export const metadata = {
@@ -12,7 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Header/>
+        {children}</body>
     </html>
   )
 }
