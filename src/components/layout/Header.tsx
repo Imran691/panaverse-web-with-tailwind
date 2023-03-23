@@ -7,7 +7,7 @@ import Wrapper from "@/components/shared/Wrapper";
 const Header = () => {
   return (
     <Wrapper>
-    <header className="flex justify-between items-center bg-white py-6 px-2 sticky top-0">
+    <header className="flex justify-between items-center bg-white py-4 sticky top-0">
       <div>
         {/* <h2>Panaverse DAO</h2> */}
         <Image src={Logo} alt="Panaverse DAO Logo" />
