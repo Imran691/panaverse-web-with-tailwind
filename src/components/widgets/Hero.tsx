@@ -18,10 +18,10 @@ const Hero = () => {
             <h1 className="text-5xl sm:text-6xl font-bold">
               Certified Web-3 and Metaverse Developer
             </h1>
-            <p className="mt-6 text-lg text-gray-600">
+            <p className="mt-6 text-xl text-gray-600">
               A One and Quarter Years Panaverse DAO Earn as you Learn Program
               Getting Ready for the Next Generation of the Internet
-              <p className="mt-4 text-lg text-gray-600">
+              <p className="mt-4 text-xl text-gray-600">
                 Consolidating Web 3.0, Metaverse, Artificial Intelligence (AI),
                 Cloud, Edge, Ambient Computing/IoT, Network Automation, and
                 Bioinformatics Technologies
