@@ -2,6 +2,7 @@ import React from "react";
 import Wrapper from "@/components/shared/Wrapper";
 import Button from "@/components/shared/Button";
 import { coreCourses } from "@/data/coreCourses";
+import QuarterBox from "@/components/shared/QuarterBox";
 
 const CoreTracks = () => {
   //in order to get line break in paragraph we assign it to a variable and pass its name as value in <p> tag and pass tialwind class "whitespace-pre-line"
@@ -26,13 +27,11 @@ const CoreTracks = () => {
 
         <div className="flex flex-col md:flex-row my-20 gap-x-8 gap-y-6">
           {coreCourses.map((item, i) => (
-            <div className="flex flex-col flex-1 justify-center border rounded-md relative px-8 py-16">
-              <h4 className="font-bold text-lg">{item.heading}</h4>
-              <p className="mt-2 text-gray-600 z-0">{item.description}</p>
-              <div className="absolute text-gray-200 -top-8 right-10 text-[170px] font-bold -z-10">
-                {i + 1}
-              </div>
-            </div>
+             <QuarterBox
+             heading={item.heading}
+             description={item.description}
+             number={i+1}
+             />
           ))}
         </div>
       </Wrapper>
