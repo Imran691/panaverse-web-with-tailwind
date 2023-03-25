@@ -1,4 +1,4 @@
-export const coreCourses = [
+export const coreCoursesData = [
     {
         heading:"Quarter I",
         description: "CS-101: Object-Oriented Programming using TypeScript",
@@ -7,11 +7,11 @@ export const coreCourses = [
     {
         heading:"Quarter II",
         description: "W2-201: Developing Planet-Scale Web 2.0 Serverless Cloud Cloud Apps and APIs using Next.js 13 and Cloud Development Kit (CDK) for Terraform",
-        number: 1,
+        number: 2,
     },
     {
         heading:"Quarter III",
         description: "$-101: Dollar Making Bootcamp - Full-Stack Template and API Product Development",
-        number: 1,
+        number: 3,
     }
 ]

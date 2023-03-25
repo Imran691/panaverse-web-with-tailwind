@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "/public/panaverse-logo.png";
+import Logo from "/public/images/panaverse-logo.png";
 import React from "react";
 import Link from "next/link";
 import Wrapper from "@/components/shared/Wrapper";

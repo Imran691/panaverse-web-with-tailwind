@@ -1,7 +1,7 @@
 import React from "react";
 import Wrapper from "@/components/shared/Wrapper";
 import Button from "@/components/shared/Button";
-import { coreCourses } from "@/data/coreCourses";
+import { coreCoursesData } from "@/data/coreCoursesData";
 import QuarterBox from "@/components/shared/QuarterBox";
 
 const CoreTracks = () => {
@@ -11,7 +11,7 @@ const CoreTracks = () => {
     <section className="mt-16 lg:mt-28">
       <Wrapper>
         <div className="max-w-screen-md">
-          <h4 className="text-teal-800 font-semibold text-lg mt-4">
+          <h4 className="text-primary font-semibold text-lg mt-4">
             Programme of studies
           </h4>
           <h2 className="text-5xl font-bold whitespace-pre-line">{header}</h2>
@@ -26,12 +26,13 @@ const CoreTracks = () => {
         </div>
 
         <div className="flex flex-col md:flex-row my-20 gap-x-8 gap-y-6">
-          {coreCourses.map((item, i) => (
-             <QuarterBox
-             heading={item.heading}
-             description={item.description}
-             number={i+1}
-             />
+          {coreCoursesData.map((item, i) => (
+            <QuarterBox
+              key={item.number}
+              heading={item.heading}
+              description={item.description}
+              number={i + 1}
+            />
           ))}
         </div>
       </Wrapper>

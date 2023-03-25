@@ -1,9 +1,17 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Wrapper from "@/components/shared/Wrapper";
 import QuarterBox from "@/components/shared/QuarterBox";
-import { coreCourses } from "@/data/coreCourses";
+import { specializedCourseData } from "@/data/specializedCoursesData";
+import Image from "next/image";
 
 const SpecializedTracks = () => {
+  const [selectedItem, setSelectedItem] = useState("wmd");
+  const selectedItemData = specializedCourseData.find(
+    (item) => item.slug === selectedItem
+  );
+
   return (
     <section>
       <Wrapper>
@@ -11,28 +19,28 @@ const SpecializedTracks = () => {
           <h2 className="text-5xl font-bold whitespace-pre-line">
             Specialized Tracks:
           </h2>
-          <p className="mt-3 text-xl text-gray-600">
+          <p className="mt-3 text-xl text-gray-600 max-w-screen-sm">
             After completing the first three quarters the participants will
             select one or more specializations consisting of two courses each:
           </p>
         </div>
 
-        <div className="mt-8">
-          <div className="shadow-xl rounded-xl border border-slate-200 py-8 px-8">
-            <h4 className="text-lg text-teal-700">Specialized Program</h4>
+        <div className="mt-10 flex gap-x-6 gap-y-8">
+          <div className="shadow-xl rounded-xl border border-slate-200 py-8 px-8 basis-8/12">
+            <h4 className="text-lg text-primary font-medium">
+              Specialized Programs
+            </h4>
+            
             <h3 className="text-2xl font-bold">
-              Web 3.0 (Blockchain) and Metaverse Specialization
+              {selectedItemData?.heading}
             </h3>
             <p className="text-lg text-slate-600 mt-2">
-              This Web 3.0 and Metaverse specialization focuses on developing
-              full-stack Web 3.0 and Metaverse experiences for the next
-              generation of the internet by specializing in building worlds that
-              merge the best of cutting-edge decentralized distributed
-              blockchains with 3D metaverse client experiences.
+              {selectedItemData?.descripton}
             </p>
-            <button className="text-teal-700 text-xl mt-4 underline flex gap-x-2 items-end">
+            <button className="text-primary text-xl mt-4 underline flex gap-x-2 items-end">
               Learn more{" "}
-              <svg className="mb-1.5"
+              <svg
+                className="mb-1.5"
                 width="10"
                 height="13"
                 viewBox="0 0 8 11"
@@ -46,19 +54,42 @@ const SpecializedTracks = () => {
                 />
               </svg>
             </button>
-          </div>
 
-          <div className="flex flex-col md:flex-row my-20 gap-x-8 gap-y-6">
-          {coreCourses.map((item, i) => (
-            <QuarterBox 
-            heading={item.heading}
-            description={item.description}
-            number={item.number}
-            />
-          ))}
+            <div className="flex gap-4 mt-8">
+              {selectedItemData?.quarters.map((item) => (
+                <QuarterBox
+                  heading={item.heading}
+                  description={item.description}
+                  number={item.number}
+                  haveBorder={false}
+                />
+              ))}
+            </div>
           </div>
-
-          <div>right side</div>
+          {/* content right */}
+          <div className="px-4 py-6 basis-4/12 bg-slate-200 space-y-3">
+            {specializedCourseData.map((item, i) => (
+              <div
+                onClick={() => setSelectedItem(item.slug)}
+                key={item.slug}
+                className="flex gap-x-3 items-center cursor-pointer"
+              >
+                <div className="flex-shrink-0 h-24 w-36">
+                  <Image
+                    src={item.image}
+                    alt={item.heading}
+                    className="h-24 object-cover"
+                  />
+                </div>
+                <div>
+                  <h4 className="text-primary font-medium">
+                    Specialized Program
+                  </h4>
+                  <h3 className="text-xl font-semibold">{item.heading}</h3>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </Wrapper>
     </section>
