@@ -15,6 +15,7 @@ const SpecializedTracks = () => {
   return (
     <section>
       <Wrapper>
+        {/* Header */}
         <div>
           <h2 className="text-5xl font-bold whitespace-pre-line">
             Specialized Tracks:
@@ -25,8 +26,9 @@ const SpecializedTracks = () => {
           </p>
         </div>
 
-        <div className="mt-10 flex gap-x-6 gap-y-8">
-          <div className="shadow-xl rounded-xl border border-slate-200 py-8 px-8 basis-8/12">
+        <div className="mt-10 flex flex-col-reverse lg:flex-row gap-x-6 gap-y-8">
+          {/* content left */}
+          <div className="self-start sticky top-24 shadow-xl rounded-xl border border-slate-200 py-8 px-8 basis-8/12">
             <h4 className="text-lg text-primary font-medium">
               Specialized Programs
             </h4>
@@ -55,9 +57,10 @@ const SpecializedTracks = () => {
               </svg>
             </button>
 
-            <div className="flex gap-4 mt-8">
+            <div className="flex flex-col sm:flex-row gap-4 mt-8">
               {selectedItemData?.quarters.map((item) => (
                 <QuarterBox
+                key={item.number}
                   heading={item.heading}
                   description={item.description}
                   number={item.number}

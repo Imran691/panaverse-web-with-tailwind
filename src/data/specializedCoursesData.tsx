@@ -44,4 +44,104 @@ export const specializedCourseData = [
         ]
 
     },
+    {
+        slug:"ai",
+        image: AIImg,
+        heading: "Artificial Intelligence (AI) and Deep Learning Specialization",
+        descripton: "The AI and Deep Learning specialization focuses on building and deploying intelligent APIs using OpenAI models and building custom Deep Learning Tensorflow models.",
+
+        quarters: [
+            {
+                heading: "Quarter IV",
+                description: "AI-351: Developing planet-scale intelligent APIs and Python programming",
+                number: 4, 
+            },
+            {
+                heading: "Quarter V",
+                description: "AI-361: Deep Learning and MLOps",
+                number: 5,
+            },
+        ]
+
+    },
+    {
+        slug:"ai",
+        image: AIImg,
+        heading: "Artificial Intelligence (AI) and Deep Learning Specialization",
+        descripton: "The AI and Deep Learning specialization focuses on building and deploying intelligent APIs using OpenAI models and building custom Deep Learning Tensorflow models.",
+
+        quarters: [
+            {
+                heading: "Quarter IV",
+                description: "AI-351: Developing planet-scale intelligent APIs and Python programming",
+                number: 4, 
+            },
+            {
+                heading: "Quarter V",
+                description: "AI-361: Deep Learning and MLOps",
+                number: 5,
+            },
+        ]
+
+    },
+    {
+        slug:"ai",
+        image: AIImg,
+        heading: "Artificial Intelligence (AI) and Deep Learning Specialization",
+        descripton: "The AI and Deep Learning specialization focuses on building and deploying intelligent APIs using OpenAI models and building custom Deep Learning Tensorflow models.",
+
+        quarters: [
+            {
+                heading: "Quarter IV",
+                description: "AI-351: Developing planet-scale intelligent APIs and Python programming",
+                number: 4, 
+            },
+            {
+                heading: "Quarter V",
+                description: "AI-361: Deep Learning and MLOps",
+                number: 5,
+            },
+        ]
+
+    },
+    {
+        slug:"ai",
+        image: AIImg,
+        heading: "Artificial Intelligence (AI) and Deep Learning Specialization",
+        descripton: "The AI and Deep Learning specialization focuses on building and deploying intelligent APIs using OpenAI models and building custom Deep Learning Tensorflow models.",
+
+        quarters: [
+            {
+                heading: "Quarter IV",
+                description: "AI-351: Developing planet-scale intelligent APIs and Python programming",
+                number: 4, 
+            },
+            {
+                heading: "Quarter V",
+                description: "AI-361: Deep Learning and MLOps",
+                number: 5,
+            },
+        ]
+
+    },
+    {
+        slug:"ai",
+        image: AIImg,
+        heading: "Artificial Intelligence (AI) and Deep Learning Specialization",
+        descripton: "The AI and Deep Learning specialization focuses on building and deploying intelligent APIs using OpenAI models and building custom Deep Learning Tensorflow models.",
+
+        quarters: [
+            {
+                heading: "Quarter IV",
+                description: "AI-351: Developing planet-scale intelligent APIs and Python programming",
+                number: 4, 
+            },
+            {
+                heading: "Quarter V",
+                description: "AI-361: Deep Learning and MLOps",
+                number: 5,
+            },
+        ]
+
+    },
 ]
